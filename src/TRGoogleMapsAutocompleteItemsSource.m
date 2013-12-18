@@ -93,7 +93,12 @@
                                                                 for (NSDictionary *place in predictions)
                                                                 {
                                                                     TRGoogleMapsSuggestion
-                                                                            *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"description"]];
+                                                                            *suggestion = [[TRGoogleMapsSuggestion alloc]
+                                                                             initWith:[place objectForKey:@"description"]
+                                                                             placeID:[place objectForKey:@"id"]
+                                                                             reference:[place objectForKey:@"reference"]
+                                                                             placeTypes:[place objectForKey:@"types"]
+                                                                             ];
                                                                     [suggestions addObject:suggestion];
                                                                 }
 

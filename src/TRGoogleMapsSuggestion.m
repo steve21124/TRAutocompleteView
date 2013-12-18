@@ -30,13 +30,25 @@
 #import "TRGoogleMapsSuggestion.h"
 
 @implementation TRGoogleMapsSuggestion
-
+/*
 - (id)initWith:(NSString *)address
 {
     self = [super init];
     if (self)
         self.address = address;
-
+    
+    return self;
+}
+*/
+- (id)initWith:(NSString *)address placeID:(NSString*)placeID reference:(NSString*)reference placeTypes:(NSArray*)placeTypes{
+    self = [super init];
+    if (self){
+        self.address = address;
+        self.placeID = placeID;
+        self.reference = reference;
+        //self.placeTypes = placeTypes;
+    }
+    
     return self;
 }
 
@@ -44,5 +56,16 @@
 {
     return self.address;
 }
+- (NSString *)getPlaceID{
+    return self.placeID;
+}
+- (NSString *)getReference{
+    return self.reference;
+}
+- (NSArray *)getPlaceTypes{
+    return self.placeTypes;
+}
+
+
 
 @end

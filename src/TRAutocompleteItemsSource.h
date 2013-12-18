@@ -39,5 +39,12 @@
 @protocol TRSuggestionItem <NSObject>
 
 - (NSString *)completionText;
+- (NSString *)getPlaceID;
+- (NSString *)getReference;
+- (NSArray *)getPlaceTypes;
+
+//- (NSString *)placeID;
+//- (NSString *)reference;
+//- (NSArray *)placeTypes;
 
 @end
